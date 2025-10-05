@@ -83,10 +83,10 @@ Here’s an example of the dashboard you’ll see:
 
 It shows:
 
-Total Opens, Clicks, and Submits per recipient.
-IP addresses and User-Agents.
-Timestamp of each event.
-Masked password data for privacy.
+- Total Opens, Clicks, and Submits per recipient.
+- IP addresses and User-Agents.
+- Timestamp of each event.
+- Masked password data for privacy.
 
 ## How It Works (Flow)
 
