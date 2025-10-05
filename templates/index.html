@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="warning">
+  <strong>Demo mode:</strong> This app is for training. Do not deploy publicly.
+</div>
+
+<h2>Create a test recipient</h2>
+<form action="/add_recipient" method="post">
+  <label>Name: <input name="name" /></label>
+  <label style="margin-left:12px">Email: <input name="email" /></label>
+  <button type="submit">Add</button>
+</form>
+
+<h2 style="margin-top:18px">Recipients</h2>
+<table>
+  <tr><th>Id</th><th>Name</th><th>Email</th><th>Links</th></tr>
+  {% for r in recipients %}
+  <tr>
+    <td>{{ r.id }}</td>
+    <td>{{ r.name }}</td>
+    <td>{{ r.email }}</td>
+    <td>
+      Click link: <a href="{{ host }}/click/{{ r.token }}" target="_blank">/click/{{ r.token }}</a><br/>
+      Pixel: <code>{{ host }}/pixel/{{ r.token }}.gif</code><br/>
+      Landing: <a href="{{ host }}/p/{{ r.token }}" target="_blank">/p/{{ r.token }}</a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+<p style="margin-top:12px">
+  <a href="/dashboard">Open dashboard</a> — shows opens/clicks/submits. Export CSV via <code>/export.csv</code>.
+</p>
+{% endblock %}

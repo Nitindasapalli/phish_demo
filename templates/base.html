@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>Phish Demo</title>
+    <style>
+      body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; max-width:900px; margin:24px; }
+      .warning { background:#ffefef; border:1px solid #ffcccc; padding:12px; margin-bottom:12px; }
+      table { border-collapse: collapse; width:100%; }
+      th, td { border:1px solid #ddd; padding:6px; }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Phishing Awareness Demo</h1>
+      <p style="color:gray">Educational demo — local use only.</p>
+    </header>
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    <footer style="margin-top:24px; color:gray">
+      <small>Do not use this tool against real users without consent.</small>
+    </footer>
+  </body>
+</html>

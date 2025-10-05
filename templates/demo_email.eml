@@ -1,0 +1,9 @@
+From: security-demo@example.com
+To: NAME <test@example.com>
+Subject: Action required — verify your account
+Content-Type: text/html
+
+<p>Hello NAME,</p>
+<p>Please <a href="http://localhost:5000/click/TOKEN">click here to verify your account</a>.</p>
+<!-- tracking pixel for demo (will cause an open event if email client loads images) -->
+<img src="http://localhost:5000/pixel/TOKEN.gif" alt="" style="display:none;" />

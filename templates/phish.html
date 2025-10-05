@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="warning">
+  <strong>PHISHING AWARENESS DEMO</strong> — This is an educational simulation. <br/>
+  <em>Do not enter any real credentials.</em>
+</div>
+
+<h2>Hello, {{ recipient.name }} — Account Verification Required</h2>
+<p>For demo purposes, this page simulates a suspicious login form. Check the dashboard after interacting.</p>
+
+<form action="/submit/{{ token }}" method="post">
+  <label>Email: <input name="email" placeholder="your@example.com" /></label><br/><br/>
+  <label>Password: <input name="password" type="password" /></label><br/><br/>
+  <label><input type="checkbox" name="consent" /> I consent to use test credentials for this demo.</label><br/><br/>
+  <button type="submit">Verify account</button>
+</form>
+
+<p style="margin-top:18px; color:grey">This page intentionally looks like a login page — it's a demo only.</p>
+{% endblock %}

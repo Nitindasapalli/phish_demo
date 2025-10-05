@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Dashboard</h2>
+<p><a href="/">Back</a> | <a href="/export.csv">Export events CSV</a></p>
+
+<table>
+  <tr><th>Recipient</th><th>Opens</th><th>Clicks</th><th>Submits</th></tr>
+  {% for row in data %}
+    <tr>
+      <td>{{ row.recipient.name }}<br/><small>{{ row.recipient.email }}</small></td>
+      <td>{{ row.counts.get('open',0) }}</td>
+      <td>{{ row.counts.get('click',0) }}</td>
+      <td>{{ row.counts.get('submit',0) }}</td>
+    </tr>
+  {% endfor %}
+</table>
+
+<h3 style="margin-top:18px">Recent events (per recipient)</h3>
+{% for row in data %}
+  <h4>{{ row.recipient.name }} ({{ row.recipient.email }})</h4>
+  <table>
+    <tr><th>When (UTC)</th><th>Type</th><th>Meta (partial)</th></tr>
+    {% for e in row.events %}
+      <tr>
+        <td>{{ e.ts }}</td>
+        <td>{{ e.event_type }}</td>
+        <td style="font-size:12px">{{ e.meta[:200] }}{% if e.meta|length > 200 %}...{% endif %}</td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endfor %}
+{% endblock %}
