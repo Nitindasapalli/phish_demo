@@ -82,12 +82,13 @@ Here’s an example of the dashboard you’ll see:
 <img width="1120" height="736" alt="Screenshot 2025-10-05 at 4 41 00 PM" src="https://github.com/user-attachments/assets/35986cd2-4bbe-4621-af45-66fcaceb5bd5" />
 
 It shows:
-Total Opens, Clicks, and Submits per recipient
-IP addresses and User-Agents
-Timestamp of each event
-Masked password data for privacy
 
-How It Works (Flow)
+Total Opens, Clicks, and Submits per recipient.
+IP addresses and User-Agents.
+Timestamp of each event.
+Masked password data for privacy.
+
+## How It Works (Flow)
 
 [Generate Phishing Link] 
         │
