@@ -33,40 +33,40 @@ It’s perfect for cybersecurity students, red-team learners, and awareness trai
 
 ---
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
-### 1️⃣ Clone the Repository
+### 1 Clone the Repository
 git clone https://github.com/Nitindasapalli/phish-awareness-demo.git
 cd phish-awareness-demo
 
-### 2️⃣ Install Dependencies
+### 2 Install Dependencies
 Make sure Python 3.8+ is installed, then:
 
 pip install -r requirements.txt
 Or install manually:
 pip install flask tqdm
 
-### 3️⃣ Run the App
+### 3 Run the App
 python app.py
 You should see:
 * Running on http://127.0.0.1:5000
 
 ## Usage Guide
-▶️ Step 1: Generate a Phishing Link
+ Step 1: Generate a Phishing Link
 Visit http://127.0.0.1:5000 and create a new recipient (e.g., a test email).
 
-▶️ Step 2: Open the Phishing Page
+ Step 2: Open the Phishing Page
 Use the generated link (e.g., http://127.0.0.1:5000/click/<token>) — either open it in a browser or with curl:
 
 curl -L http://127.0.0.1:5000/click/<token>
 
-▶️ Step 3: Submit Demo Credentials
+ Step 3: Submit Demo Credentials
 Fill in the form with dummy data (never real passwords):
 
 Email: test@example.com
 Password: demo123
 
-▶️ Step 4: View the Dashboard
+ Step 4: View the Dashboard
 Go to:
 
 http://127.0.0.1:5000/dashboard
@@ -79,6 +79,7 @@ Submissions (login form posted)
 Example Output
 Here’s an example of the dashboard you’ll see:
 
+<img width="1120" height="736" alt="Screenshot 2025-10-05 at 4 41 00 PM" src="https://github.com/user-attachments/assets/35986cd2-4bbe-4621-af45-66fcaceb5bd5" />
 
 It shows:
 Total Opens, Clicks, and Submits per recipient
@@ -108,7 +109,7 @@ How It Works (Flow)
         ▼
 [Dashboard + CSV Export]
 
-Technologies Used
+## Technologies Used
  Python 3
  Flask – lightweight web framework
  SQLite – simple event storage
